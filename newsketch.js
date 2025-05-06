@@ -24,16 +24,15 @@ function setup() {
 }
 
 function loadRandomUserImage() {
-  fetch('https://randomuser.me/api/')
-    .then(res => res.json())
-    .then(data => {
-      let imgUrl = data.results[0].picture.large;
-      loadImage(imgUrl, (img) => {
-        principalImage = img;
-        loadTestingData(); // Now load your test images
+    fetch('https://randomuser.me/api/')
+      .then(res => res.json())
+      .then(data => {
+        const imgUrl = data.results[0].picture.large;
+        const corsProxy = 'https://cors-anywhere.herokuapp.com/';
+        const proxiedUrl = corsProxy + imgUrl;
+        principalImage = loadImage(proxiedUrl);
       });
-    });
-}
+  }
 
 function loadTestingData() {
   let count = 0;
