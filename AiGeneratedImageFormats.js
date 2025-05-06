@@ -32,9 +32,9 @@ function preload() {
   var imageToload= Math.floor(Math.random()*200)
 
   // Load the principal image
- //principalImage = loadImage('./data/'+ imageToload +'.jpeg');
+ principalImage = loadImage('./data/'+ imageToload +'.jpeg');
 
-  principalImage = loadImage('https://thispersondoesnotexist.com/');
+  //principalImage = loadImage('https://thispersondoesnotexist.com/');
 
   //principalImage = loadImage('http://localhost:3000/random-face');
   //principalImage = loadImage('./B2.png');
@@ -50,6 +50,7 @@ function preload() {
 }
 
 function setup() {
+
 
 
   //console.log(testingData)
