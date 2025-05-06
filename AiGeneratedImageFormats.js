@@ -34,7 +34,7 @@ function preload() {
   // Load the principal image
  //principalImage = loadImage('./data/'+ imageToload +'.jpeg');
 
-  principalImage = loadImage('./test.jpeg');
+  principalImage = loadImage('https://thispersondoesnotexist.com/');
 
   //principalImage = loadImage('http://localhost:3000/random-face');
   //principalImage = loadImage('./B2.png');
